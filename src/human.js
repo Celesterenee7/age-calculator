@@ -1,10 +1,11 @@
 export class Human {
   constructor(age) {
     this.age = age;
-    this.ageOnMercury = 129;
-    this.ageOnVenus = 41;
+    // this.lifeSpan = lifeSpan;
   }
-  // checkPlanetAge() {
-  //   this.ageOnMercury = Math.ceil(this.age / .24);
-  // }
+  planetAge() {
+    this.ageOnMercury = parseFloat((this.age / .24).toFixed(0));
+    this.ageOnVenus = parseFloat((this.age / .62).toFixed(0));
+    this.ageOnMars = parseFloat((this.age / 1.88).toFixed(0));
+  }
 }
