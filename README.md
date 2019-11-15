@@ -22,8 +22,8 @@ This application will determine a user’s age based on a planet’s solar years
     * Example Input: 57
     * Example Output: 5
 * Determines how many years a user has left to live on each planet
-    *
-    *
+    * Example Input: 31 in earth years (51 in Venus years)
+    * Example Output: Life Expectany would be 72 years so out put is 21
 ## Setup/Installation Requirements
 * Clone this repository
 * Open in your preferred editor
