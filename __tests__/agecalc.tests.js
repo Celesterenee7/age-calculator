@@ -30,11 +30,13 @@ describe('Human', () => {
         newHuman.planetAge();
         expect(newHuman.ageOnSaturn).toEqual(1);
     });
-    // test('should calculate life expectancy for each planet', () => {
-    //     let newHuman = new Human(31);
-    //     expect(newHuman.ageOnMercury).toEqual(129);
-    //     expect(newHuman.ageOnVenus).toEqual(129);
-    //     expect(newHuman.ageOnMars).toEqual(129);
-    //     expect(newHuman.ageOnJupiter).toEqual(129);
-    // });
+    test('should calculate life expectancy for average person on each planet', () => {
+        let newHuman = new Human(31);
+        newHuman.planetLifeSpan();
+        // expect(newHuman.ageOnMercury).toEqual(0);
+        expect(newHuman.ageOnVenus).toEqual(22);
+        expect(newHuman.ageOnMars).toEqual(56);
+        expect(newHuman.ageOnJupiter).toEqual(69);
+        expect(newHuman.ageOnSaturn).toEqual(71);
+    });
 });
