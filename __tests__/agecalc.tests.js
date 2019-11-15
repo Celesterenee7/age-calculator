@@ -34,9 +34,9 @@ describe('Human', () => {
         let newHuman = new Human(31);
         newHuman.planetLifeSpan();
         // expect(newHuman.ageOnMercury).toEqual(0);
-        expect(newHuman.ageOnVenus).toEqual(22);
-        expect(newHuman.ageOnMars).toEqual(56);
-        expect(newHuman.ageOnJupiter).toEqual(69);
-        expect(newHuman.ageOnSaturn).toEqual(71);
+        expect(newHuman.ageOnVenus).toEqual(21);
+        expect(newHuman.ageOnMars).toEqual(55);
+        expect(newHuman.ageOnJupiter).toEqual(68);
+        expect(newHuman.ageOnSaturn).toEqual(70);
     });
 });
