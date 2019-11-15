@@ -1,11 +1,10 @@
 import {
     Human
-} from './../src/js/human.js';
+} from './../src/human.js';
 
 describe('Human', () => {
+    const newHuman = new Human();
     test('should calculate humans age in mercury years only', () => {
-        let newHuman = new Human(31);
-        newHuman.determineAge();
-        expect(newHuman.ageOnMercury).toEqual(129.17);
+        expect(newHuman.ageOnMercury).toEqual(129);
     });
 });
