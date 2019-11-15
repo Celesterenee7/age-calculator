@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {
+  CleanWebpackPlugin
+} = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const SRC = path.resolve(__dirname, 'src/js');
 
@@ -15,7 +17,9 @@ module.exports = {
     contentBase: './dist'
   },
   plugins: [
-    new UglifyJsPlugin({ sourceMap: true }),
+    new UglifyJsPlugin({
+      sourceMap: true
+    }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'TITLE',
@@ -24,8 +28,7 @@ module.exports = {
     })
   ],
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.css$/,
         use: [
           'style-loader',
@@ -41,12 +44,8 @@ module.exports = {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
           'file-loader',
-        ],
-      },
-      {
-			    test: /\.(ogg|mp3|wav|mpe?g)$/i,
-			    use: 'file-loader'
-			}
+        ]
+      }
     ]
   }
 };
