@@ -8,5 +8,6 @@ export class Human {
     this.ageOnVenus = parseFloat((this.age / .62).toFixed(0));
     this.ageOnMars = parseFloat((this.age / 1.88).toFixed(0));
     this.ageOnJupiter = parseFloat((this.age / 11.86).toFixed(0));
+    this.ageOnSaturn = parseFloat((this.age / 29.46).toFixed(0));
   }
 }
