@@ -4,7 +4,7 @@ const {
   CleanWebpackPlugin
 } = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const SRC = path.resolve(__dirname, 'src/js');
+
 
 module.exports = {
   entry: './src/scripts.js',
@@ -22,7 +22,7 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'TITLE',
+      title: 'Age Calculator',
       template: './src/index.html',
       inject: 'body'
     })
@@ -37,14 +37,11 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: [
+          /node_modules/,
+          /spec/
+        ],
         loader: "eslint-loader"
-      },
-      {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          'file-loader',
-        ]
       }
     ]
   }
