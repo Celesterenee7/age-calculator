@@ -20,4 +20,9 @@ describe('Human', () => {
         newHuman.planetAge();
         expect(newHuman.ageOnMars).toEqual(16);
     });
+    test('should calculate humans age in jupiter years only', () => {
+        let newHuman = new Human(31);
+        newHuman.planetAge();
+        expect(newHuman.ageOnJupiter).toEqual(3);
+    });
 });
