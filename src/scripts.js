@@ -4,16 +4,16 @@ import './css/bootstrap.min.css';
 import './css/styles.css';
 import {
     Human
-  } from './src/human.js';
+} from './human.js';
 
+$(document).ready(function () {
+    $("form#formInput").submit(function () {
+        event.preventDefault();
+        const humanAge = parseInt($("#humanAge").val());
+        const humanShape = parseInt($("input:radio[name=shape]:checked").val());
+        const human = new Human(humanAge, humanShape);
+        human.planetAge();
 
-  $(document).ready(function () {
-    $("form#generator").submit(function () {
-      event.preventDefault();
-      let ageInput = parseInt($("#humanAge").val());
-      let newHuman = new Human(ageInput);
-      newHuman.calcAge();
-
-      $("#ageOnMercury").text(newHuman.ageOnMercury);
+        $("#results").text();
     });
-  });
+});

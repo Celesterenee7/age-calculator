@@ -32,7 +32,7 @@ describe('Human', () => {
     });
     test('should calculate life expectancy for average person on each planet', () => {
         let newHuman = new Human(31);
-        newHuman.planetLifeSpan();
+        newHuman.averageLifeSpan();
         // expect(newHuman.ageOnMercury).toEqual(0);
         expect(newHuman.ageOnVenus).toEqual(21);
         expect(newHuman.ageOnMars).toEqual(55);

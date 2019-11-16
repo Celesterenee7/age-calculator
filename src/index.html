@@ -11,17 +11,32 @@
 
 <body>
   <div class="container">
-    <form id="generator">
+    <form id="formInput">
       <h1>Planet Age Calculator</h1>
-      <h2>Find Out Your Age on Mercury</h2>
+      <h3>Find Out Your Age on Each Planet</h3>
+      <hr>
+      <h3>Type in your age below</h3>
+      <input class="form-control" type="text" name="humanAge" id="humanAge">
       <br>
-      <input class="form-control" type="text" id="humanAge">
+      <h3>Are you in good shape?</h3>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" name="shape" type="radio" value="1">
+            <label class="form-check-label">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" name="shape" type="radio" value="2">
+            <label class="form-check-label">No</label>
+          </div>
+        </div>
+      </div>
       <br>
-      <button type="button" class="btn btn-primary btn-lg">Large button</button>
+      <button type="button" class="btn btn-primary btn-lg">Submit</button>
     </form>
     <br>
-    <div id="planetAges">
-      <p><span id="ageOnMercury"></span></p>
+    <div>
+      <h1 id="results"></h1>
     </div>
   </div>
 </body>
